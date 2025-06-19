@@ -33,7 +33,8 @@ float Ahomework5::distance(FVector first, FVector second)
 {
     float dx = first.X - second.X;
     float dy = first.Y - second.Y;
-    return FMath::Sqrt(dx * dx + dy * dy);
+    float dz = first.Z - second.Z;
+    return FMath::Sqrt(dx * dx + dy * dy + dz * dz);
 }
 
 // 특정 확률로 이벤트 발생시키는 함수 (코드 스니펫 활용)
@@ -92,7 +93,7 @@ void Ahomework5::move()
         // === 도전 기능 시작 ===
 
         // 이동 거리 계산 (distance 함수 활용)
-        float StepDistance = distance(PreviousPosition, CurrentPosition);
+        float StepDistance = distance(CurrentPosition, PreviousPosition);
         TotalDistance += StepDistance;
         UE_LOG(LogTemp, Display, TEXT("Step %d: 이동 거리 %.2f"), i, StepDistance);
 
