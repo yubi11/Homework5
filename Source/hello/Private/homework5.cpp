@@ -28,7 +28,7 @@ int32 Ahomework5::step()
     return FMath::RandRange(0, 1);
 }
 
-// 두 좌표간 거리를 구하는 함수 (제공된 코드 스니펫 활용)
+// 두 좌표간 거리를 구하는 함수 (코드 스니펫 활용)
 float Ahomework5::distance(FVector first, FVector second)
 {
     float dx = first.X - second.X;
@@ -36,7 +36,7 @@ float Ahomework5::distance(FVector first, FVector second)
     return FMath::Sqrt(dx * dx + dy * dy);
 }
 
-// 특정 확률로 이벤트 발생시키는 함수 (제공된 코드 스니펫 활용)
+// 특정 확률로 이벤트 발생시키는 함수 (코드 스니펫 활용)
 bool Ahomework5::TriggerEventWithProbability(float Probability)
 {
     int32 RandomValue = FMath::RandRange(1, 100); // 1 ~ 100의 난수 생성
